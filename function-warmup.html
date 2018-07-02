@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function () {
+        "use strict";
+        function sortedNameGenerator() {
+
+            var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+            var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+            var names = [];
+            firstNames.sort();
+            lastNames.sort();
+            firstNames.forEach(function (name, index) {
+                names.push(
+                    {
+                        firstName: name,
+                        lastName: lastNames[index]
+                    })
+            });
+            return names;
+        }
+        console.table(sortedNameGenerator());
+    })();
+</script>
+
+</body>
+</html>
+
+Write a function sortedNameGenerator() that takes in two array arguments as input and returns an array of name objects with properties for firstName and lastName. The first and last names should be matched by ascending alphabetical order. Assume both array inputs are of equal length and consisting only of valid string name elements.
+
+Example:
+
+```
+var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+
+nameGenerator(firstNames, lastNames); // will return the following...
+
+/*
+
+[
+{
+firstName: Billy,
+lastName: Barnes
+},
+{
+firstName: Cindy,
+lastName: Conner
+},
+{
+firstName:  Karen,
+lastName: Sanders
+},
+{
+firstName: Omar,
+lastName: Smith
+}
+]
+
+*/
+
+```
+
+You should test your function by console logging the output of calling your function with the example input variables.
