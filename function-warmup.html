@@ -9,35 +9,45 @@
 </head>
 <body>
     <script>
-        (function () {
-            "use strict";
 
-            var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
-            var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+        var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+        var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
 
-            function sortedNameGenerator(arrFirst, arrLast){
+        /*
 
-                arrFirst.sort();
-                arrLast.sort();
-                var namesArray = [];
-
-                arrFirst.forEach(function (name, i) {
-                    namesArray.push({
-                        firstName: name,
-                        lastName: arrLast[i]
-
-                    });
-
-
-                });
-                return namesArray;
-
+          [
+            {
+              firstName: Billy,
+              lastName: Barnes
+            },
+            {
+              firstName: Cindy,
+              lastName: Conner
+            },
+            {
+              firstName:  Karen,
+              lastName: Sanders
+            },
+            {
+              firstName: Omar,
+              lastName: Smith
             }
+          ]
 
-            console.log(sortedNameGenerator(firstNames, lastNames));
+        */
 
+        function nameGenerator(firstNameArr, lastNameArr) {
+            var outputArr = [];
+            firstNameArr.sort();
+            lastNameArr.sort();
 
-        })();
+            for (var i = 0; i < firstNameArr.length; i++) {
+                outputArr.push({firstName: firstNameArr[i], lastName: lastNameArr[i]});
+            }
+            return outputArr;
+        }
+
+        console.log(nameGenerator(firstNames, lastNames)); // will return the following...
 
     </script>
 
