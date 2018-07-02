@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function warm-up</title>
+    </head>
+    <body>
+        <script>
+            (function(){
+
+                function sortedNameGenerator(firstAry,secondAry){
+                  firstAry.sort();
+                  secondAry.sort();
+                  var returnAry = [];
+
+                  firstAry.forEach(function(name,i){
+                      if ((typeof secondAry[i]) === 'undefined'){
+                          return;
+                      }
+                     returnAry.push({
+                          firstName: name,
+                          lastName: secondAry[i]
+                     });
+                  });
+                    return returnAry;
+                }
+            })();
+        </script>
+    </body>
+</html>
