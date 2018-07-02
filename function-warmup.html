@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        (function() {
+            "use strict";
+
+            function sortedNameGenerator(arr1, arr2) {
+                var firstName = arr1.sort();
+                var lastName = arr2.sort();
+                var names = [];
+
+                arr1.forEach(function(name, index){
+                    names.push({firstName: name, lastName: lastNames[index]})
+                });
+                return(names);
+            }
+
+            var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+            var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+
+            console.log(sortedNameGenerator(firstNames, lastNames));
+
+        })();
+
+        // function mergeSortdArray(a,b){
+        //     for(var i=0;i<b.length;i++){
+        //         a.push(b[i]);
+        //     }
+        //     //console.log(a);
+        //     for(i=0;i<a.length;i++)
+        //     {
+        //         for(j=i+1;j<a.length;j++)
+        //         {
+        //             if(a[i]>a[j])
+        //             {
+        //                 temp=a[i];
+        //                 a[i]=a[j];
+        //                 a[j]=temp;
+        //             }
+        //         }
+        //     }
+        //     return a;
+        // }
+        // console.log(mergeSortedArray([1,2,3,5,9],[4,6,7,8]));
+    </script>
+</body>
+</html>
