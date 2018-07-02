@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--Function Warm Up-->
+
+<!--Write a function sortedNameGenerator() that takes in two array arguments -->
+<!--as input and returns an array of name objects with properties for -->
+<!--firstName and lastName. The first and last names should be matched by -->
+<!--ascending alphabetical order. Assume both array inputs are of equal length -->
+<!--and consisting only of valid string name elements.-->
+
+<!--Example:-->
+
+<!--var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];-->
+<!--var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];-->
+
+<!--nameGenerator(firstNames, lastNames); // will return the following...-->
+
+<!--/*-->
+
+<!--[-->
+<!--{-->
+<!--firstName: Billy,-->
+<!--lastName: Barnes-->
+<!--},-->
+<!--{-->
+<!--firstName: Cindy,-->
+<!--lastName: Conner-->
+<!--},-->
+<!--{-->
+<!--firstName:  Karen,-->
+<!--lastName: Sanders-->
+<!--},-->
+<!--{-->
+<!--firstName: Omar,-->
+<!--lastName: Smith-->
+<!--}-->
+<!--]-->
+
+<!--*/-->
+
+<!--You should test your function by console logging the output of calling your
+function with the example input variables.-->
+
+<script>
+
+	var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+	var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+	var firstAndLastSorted = [];
+    function sortedNameGenerator(firstNames, lastNames) {
+        firstNames = firstNames.sort();
+        lastNames = lastNames.sort();
+    	firstNames.forEach(function (first, i){
+    		var name = {};
+    		name.firstName = first;
+    		name.lastName = lastNames[i];
+    		firstAndLastSorted.push(name);
+         });
+    }
+
+    sortedNameGenerator(firstNames, lastNames);
+    console.log(firstAndLastSorted);
+
+</script>
+</body>
+</html>
