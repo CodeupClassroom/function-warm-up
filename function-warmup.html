@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function Warm Up</title>
+</head>
+<body>
+
+
+<script>
+
+    (function(){
+
+
+    "use strict";
+
+        var firstNames = ['Billy','Karen', 'Cindy', 'Omar'];
+        var lastNames = ['Sanders', 'Smith', 'Barnes', 'Connor'];
+
+
+        var firstNamesSorted = firstNames.sort ();
+    var lastNamesSorted = lastNames.sort ();
+    var generatedNames = [];
+
+for (var i = 0; i < firstNamesSorted.length; i++) {
+
+    generatedNames.push({firstName: firstNamesSorted[i], lastName: lastNamesSorted[i]})
+
+    return generatedNames;
+
+};
+
+console.log(sortedNameGenerator(firstNames,lastNames));
+
+
+
+
+    })();
+
+</script>
+
+</body>
+</html>
+
