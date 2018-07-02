@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Warm Up</title>
+</head>
+<body>
+
+
+<script>
+    (function(){
+"use strict";
+
+//         Write a function sortedNameGenerator() that takes in two array arguments as input and returns an array of name objects with properties for firstName and lastName. The first and last names should be matched by ascending alphabetical order. Assume both array inputs are of equal length and consisting only of valid string name elements.
+//
+//             Example:
+//
+//         ```
+// var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+// var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+//
+// nameGenerator(firstNames, lastNames); // will return the following...
+//
+// /*
+//
+//   [
+//     {
+//       firstName: Billy,
+//       lastName: Barnes
+//     },
+
+    function sortedNameGenerator(arr1, arr2){
+      var empty = [];
+      var sortarr1 = arr1.sort();
+      var sortarr2 = arr2.sort();
+
+      for(var i = 0; i < arr1.length; i++){
+            empty.push({arr1: sortarr1[i], arr2: sortarr2[i]});
+
+      }
+        return empty;
+    }
+    console.log(sortedNameGenerator(["Billy", "Karen", "Cindy", "Omar"], ["Sansers", "Smith", "Barnes", "Conner"]));
+
+
+
+    })();
+
+</script>
+
+
+</body>
+</html>
