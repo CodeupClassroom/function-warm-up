@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    (function() {
+       'use strict';
+        var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+        var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+       function sortedNameGenerator(firstStr, lastStr){
+           firstStr = firstStr.sort();
+           lastStr = lastStr.sort();
+           var obj = [];
+           obj.push({firstName: firstStr[0],
+           lastName: lastStr[0]});
+           for(var i = 1; i < firstStr.length; i++){
+               obj.push({firstName: firstStr[i],
+               lastName: lastStr[i]});
+           }
+           return obj;
+
+       }
+        console.log(sortedNameGenerator(firstNames,lastNames));
+    })();
+</script>
+
+</body>
+</html>
