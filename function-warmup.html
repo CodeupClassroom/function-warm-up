@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Function Warm Up</title>
+</head>
+<body>
+
+<script>
+    "use strict";
+
+    var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+    var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+
+    (function sortedNameGenerator(input1, input2) {
+        input1.sort();
+        input2.sort();
+        var arrOfNameObjects = [];
+        for (var i = 0; i < input1.length && input2.length; i += 1) {
+            arrOfNameObjects.push({firstName: input1[i], lastName: input2[i]})
+            }
+        return console.log(arrOfNameObjects);
+    })(firstNames, lastNames);
+
+</script>
+
+</body>
+</html>
