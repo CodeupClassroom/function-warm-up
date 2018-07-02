@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+</head>
+<body>
+
+<h1>Hello!</h1>
+
+<script>
+    "use strict";
+
+    var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+    var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+
+    function sortedNameGenerator(firstNameArr, lastNameArr) {
+        var outputArr = [];
+        firstNameArr.sort();
+        lastNameArr.sort();
+
+        for (var i = 0; i < firstNameArr.length; i++) {
+            outputArr.push({firstName: firstNameArr[i], lastName: lastNameArr[i]});
+        }
+        return outputArr;
+    }
+       console.log(sortedNameGenerator(firstNames, lastNames));
+
+
+</script>
+</body>
+</html>
