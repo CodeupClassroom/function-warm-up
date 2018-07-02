@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function () {
+            "use strict";
+
+            var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+            var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+
+            function sortedNameGenerator(arrFirst, arrLast){
+
+                arrFirst.sort();
+                arrLast.sort();
+                var namesArray = [];
+
+                arrFirst.forEach(function (name, i) {
+                    namesArray.push({
+                        firstName: name,
+                        lastName: arrLast[i]
+
+                    });
+
+
+                });
+                return namesArray;
+
+            }
+
+            console.log(sortedNameGenerator(firstNames, lastNames));
+
+
+        })();
+
+    </script>
+
+</body>
+</html>
