@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function WarmUp</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        (function() {
+
+
+            var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
+            var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];
+
+
+            function sortedNameGenerator(firstNames, lastNames) {
+
+                   var person = [];
+
+                   firstNames.sort();
+                   lastNames.sort();
+
+                   for(var i = 0; i < firstNames.length; i++) {
+
+                     var fullName = {
+                        firstName: firstNames[i],
+                        lastName: lastNames[i]
+                    };
+                     person.push(fullName);
+                   }
+                    console.log(person);
+            }
+
+
+
+            sortedNameGenerator(firstNames, lastNames);
+
+
+
+
+        })();
+    </script>
+
+</body>
+</html>
