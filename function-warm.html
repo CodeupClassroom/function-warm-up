@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<body>
+<script>
+    "use strict";
+    (function(){
+
+        var arr = [];
+        function sortedNameGenerator(arr1,arr2) {
+
+            arr1.sort();
+            arr2.sort();
+            for (var i = 0; i < arr1.length; i++) {
+                var object = {
+                    first: arr1[i],
+                    second: arr2[i]
+                };
+                arr.push(object);
+            }
+
+            return arr;
+        }
+        var firstNames = ['Billy','Karen','Cindy','Omar'];
+        var lastNames =['Sanders','Smith','Barnes','Conner'];
+        console.log(sortedNameGenerator(firstNames,lastNames));
+
+    })()
+
+</script>
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+<!--Write a function sortedNameGenerator() that takes in two array arguments as input-->
+<!--and returns an array of name objects with properties for firstName and lastName.-->
+<!--The first and last names should be matched by ascending alphabetical order.-->
+<!--Assume both array inputs are of equal length and consisting only of valid string name elements.-->
+
+<!--Example:-->
+
+<!--```-->
+<!--var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];-->
+<!--var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];-->
+
+<!--nameGenerator(firstNames, lastNames); // will return the following...-->
+
+<!--/*-->
+
+<!--[-->
+<!--{-->
+<!--firstName: Billy,-->
+<!--lastName: Barnes-->
+<!--},-->
+<!--{-->
+<!--firstName: Cindy,-->
+<!--lastName: Conner-->
+<!--},-->
+<!--{-->
+<!--firstName:  Karen,-->
+<!--lastName: Sanders-->
+<!--},-->
+<!--{-->
+<!--firstName: Omar,-->
+<!--lastName: Smith-->
+<!--}-->
+<!--]-->
+
+<!--*/-->
+
+<!--```-->
+
+<!--You should test your function by console logging the output of calling your function with the example input variables.-->
