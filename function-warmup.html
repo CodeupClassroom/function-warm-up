@@ -10,15 +10,23 @@
         (function() {
             "use strict";
 
-            function sortedNameGenerator(arr1, arr2) {
-                var firstName = arr1.sort();
-                var lastName = arr2.sort();
-                var names = [];
+            function sortedNameGenerator(firstNameArr, lastNameArr) {
+                var outputArr = [];
+                var firstName = firstNameArr.sort();
+                var lastName = lastNameArr.sort();
 
-                arr1.forEach(function(name, index){
-                    names.push({firstName: name, lastName: lastNames[index]})
-                });
-                return(names);
+                // firstNameArr.forEach(function(name, index){
+                //     outputArr.push({firstName: name, lastName: lastNames[index]})
+                // });
+
+                for (var i = 0; i < firstNameArr.length; i++) {
+                    outputArr.push
+                    ({
+                        firstName: firstNameArr[i],
+                        lastName: lastNameArr[i]
+                    });
+                }
+                return(outputArr);
             }
 
             var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];
