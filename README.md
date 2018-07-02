@@ -12,7 +12,8 @@
 
 ## Function Warm Up
 
-Write a function sortedNameGenerator() that takes in two array arguments as input and returns an array of name objects with properties for firstName and lastName. The first and last names should be matched by ascending alphabetical order. Assume both array inputs are of equal length and consisting only of valid string name elements.
+Write a function sortedNameGenerator() that takes in two array arguments as input and returns an array of name objects with properties for firstName and lastName. 
+The first and last names should be matched by ascending alphabetical order. Assume both array inputs are of equal length and consisting only of valid string name elements.
 
 Example:
 
