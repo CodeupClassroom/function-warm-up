@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <h1>Functions Warmup 7/2/18</h1>
+    <!--Write a function sortedNameGenerator() that takes in two array arguments as input and returns an array of name -->
+    <!--objects with properties for firstName and lastName. The first and last names should be matched by ascending alphabetical order. -->
+    <!--Assume both array inputs are of equal length and consisting only of valid string name elements.-->
+
+    <!--Example:-->
+
+    <!--```-->
+    <!--var firstNames = ['Billy', 'Karen', 'Cindy', 'Omar'];-->
+    <!--var lastNames = ['Sanders', 'Smith', 'Barnes', 'Conner'];-->
+
+    <!--nameGenerator(firstNames, lastNames); // will return the following...-->
+
+    <!--/*-->
+
+    <!--[-->
+    <!--{-->
+    <!--firstName: Billy,-->
+    <!--lastName: Barnes-->
+    <!--},-->
+    <!--{-->
+    <!--firstName: Cindy,-->
+    <!--lastName: Conner-->
+    <!--},-->
+    <!--{-->
+    <!--firstName:  Karen,-->
+    <!--lastName: Sanders-->
+    <!--},-->
+    <!--{-->
+    <!--firstName: Omar,-->
+    <!--lastName: Smith-->
+    <!--}-->
+    <!--]-->
+
+    <!--You should test your function by console logging the output of calling your function with the example input variables.-->
+
+    <script>
+        "use strict";
+            (function () {
+
+                function sortedNameGenerator(array1, array2) {
+
+                    var outputArray=[];
+
+                    var firstName = array1.sort();
+                    var lastName = array2.sort();
+
+                    for (var i = 0; i < firstName.length; i++) {
+                        outputArray.push({firstName: firstName[i], lastName: lastName[i]})
+                    }
+                    return outputArray;
+                }
+
+                var firstNames = ['mykel', 'millie', 'malibu', ];
+                var lastNames = ['Kovar', 'hart', 'kovar2'];
+
+                console.log(sortedNameGenerator(firstNames, lastNames));
+
+
+
+
+
+
+
+
+
+
+
+
+            })();
+    </script>
+</body>
+</html>
