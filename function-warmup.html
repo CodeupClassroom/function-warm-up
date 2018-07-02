@@ -13,22 +13,23 @@
 
 
         function sortedNameGenerator(arr1, arr2) {
-            var finalArray = [];
-            arr1.sort();
-            arr2.sort();
-            for (var i = 0; i < arr1.length; i++) {
+            var finalArray = [];//to accept final result
+            arr1.sort();//sort first names
+            arr2.sort();//sort last names
+            for (var i = 0; i < arr1.length, i < arr2.length; i++) {
                 var object = {
                     firstName: arr1[i],
                     lastName: arr2[i]
-                };
-                finalArray.push(object);
+                }; //for loop to rearrange array
+                finalArray.push(object); //add result of rearrangement to one array
             }
-            return finalArray
+            return finalArray //print result
         }
-    var fNames=['john','mary','konrad'];
-    var lNames=['max', 'timmy', 'yerlo'];
-// sortedNameGenerator();
-console.log(sortedNameGenerator(fNames,lNames))
+    var fNames=['zoe','mary','konrad'];
+    var lNames=['zed', 'timmy', 'yerlo'];
+
+
+    console.log(sortedNameGenerator(fNames,lNames)) //test the function
 
 
     })();
